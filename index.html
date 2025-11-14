@@ -11,10 +11,6 @@
             height: 100vh;
             margin: 0;
             background-color: #ffe6e6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
         }
         .hidden { display: none; }
 
@@ -24,7 +20,6 @@
             grid-template-columns: repeat(3, 100px);
             grid-template-rows: repeat(3, 100px);
             gap: 5px;
-            margin: auto;
         }
         .puzzle-piece {
             width: 100px;
@@ -33,7 +28,9 @@
             cursor: pointer;
             border: 1px solid #000;
         }
-        .selected { border: 3px solid red !important; }
+        .selected {
+            border: 3px solid red !important;
+        }
 
         .nav-btn {
             font-size: 1.5rem;
@@ -55,6 +52,9 @@
 </head>
 <body>
 
+<!-- CONTENEDOR PRINCIPAL QUE CENTRA TODO -->
+<div id="appContainer" class="w-100 h-100 d-flex justify-content-center align-items-center">
+
 <!-- ==========================
      PANTALLA 1: ROMPECABEZAS
 ============================== -->
@@ -62,7 +62,6 @@
     <h1 class="text-danger">Primero un rompecabezas</h1>
     <p>Para descubrir lo que tengo para ti, primero este rompecabezas debes unir</p>
 
-    <!-- Contenedor centrado para el puzzle -->
     <div class="d-flex justify-content-center align-items-center w-100">
         <div class="puzzle-container" id="puzzleContainer"></div>
     </div>
@@ -71,7 +70,7 @@
 <!-- ==========================
      PANTALLA 2: MENSAJE
 ============================== -->
-<div id="screen2" class="hidden container">
+<div id="screen2" class="hidden container text-center">
     <h1 class="text-danger">Déjame pintar tu cielo</h1>
     <p id="mensaje1">
         Lo lograste mi amor, lo armaste.<br>
@@ -86,7 +85,7 @@
 <!-- ==========================
      PANTALLA 3: MÚSICA
 ============================== -->
-<div id="screen3" class="hidden container">
+<div id="screen3" class="hidden container text-center">
     <h1 class="text-danger">Ahora una canción</h1>
 
     <!-- FOTO DE LA CANCIÓN -->
@@ -117,7 +116,7 @@
 <!-- ==========================
      PANTALLA 4: MENSAJE FINAL
 ============================== -->
-<div id="screen4" class="hidden container">
+<div id="screen4" class="hidden container text-center">
     <h1 class="text-danger">Caminemos bonito</h1>
     <p id="mensaje2">
         Cada día yo elijo, pues la vida son montañas que quiero atravesar juntitos
@@ -125,6 +124,8 @@
 
     <button class="btn btn-danger nav-btn" onclick="nextScreen(3)">⬅</button>
 </div>
+
+</div> <!-- FIN appContainer -->
 
 <!-- ==========================
      SCRIPT GENERAL
