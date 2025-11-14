@@ -13,10 +13,11 @@
 
     <style>
         body, html {
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #ffe6e6;
-            overflow: hidden;
+            overflow-x: hidden;   /* solo oculta horizontal, deja vertical */
+            overflow-y: auto;     /* permite hacer scroll */
         }
 
         /* CONTENEDOR PRINCIPAL */
@@ -59,14 +60,14 @@
 
         /* Pantallas */
         .screen {
-            position: absolute;
             width: 100%;
             max-width: 550px;
             padding: 20px;
-            z-index: 2;
+            margin: 0 auto;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.6s ease;
+            position: relative;   /* ← permite scroll */
         }
 
         .screen.active {
