@@ -143,12 +143,15 @@
 
     <p id="mensaje1">
         Lo lograste mi amor, lo armaste.<br><br>
-        Ahora probablemente te preguntes por qué la noche estrellada, pues, seguro recuerdas me dijiste que antes todo era gris para ti hasta que te llené de colorido.<br><br>
-        La noche estrellada representa el cómo quiero hacerte sentir, solamente tienes que contarme tu color favorito y yo pintaré el cielo para ti, haré de tus colores algo tan bonito como el cielo de Van Gogh.<br><br>
-        Tu vida ya no tiene que sentirse gris, déjame pintar tu cielo mi amor.
     </p>
 
-    <button class="btn btn-danger nav-btn" onclick="nextScreen(3)">➡</button>
+    <!-- AUDIO: se añadirá debajo del mensaje -->
+    <audio controls class="mt-2">
+        <source src="1.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <button class="btn btn-danger nav-btn mt-3" onclick="nextScreen(3)">➡</button>
 </div>
 
 <!-- ==========================
@@ -168,7 +171,7 @@
     </audio>
 
     <p id="songMessage" class="mt-3">
-        Aquí puedes poner un mensaje sobre la canción...
+
     </p>
 
     <div class="mt-3 d-flex justify-content-center gap-4">
@@ -178,19 +181,49 @@
 </div>
 
 <!-- ==========================
-     PANTALLA 4: FINAL
+     PANTALLA 4: MENSAJE + AUDIO (NUEVA)
 ============================== -->
 <div id="screen4" class="screen hidden">
     <h1 class="text-danger">Caminemos bonito</h1>
 
-    <p id="mensaje2">
+    <p id="mensajeExtra">
         Cada día yo elijo, pues la vida son montañas que quiero atravesar juntitos.
     </p>
 
-    <button class="btn btn-danger nav-btn" onclick="nextScreen(3)">⬅</button>
+    <audio controls class="mt-2">
+        <source src="2.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <div class="mt-3 d-flex justify-content-center gap-4">
+        <button class="btn btn-danger nav-btn" onclick="nextScreen(3)">⬅</button>
+        <button class="btn btn-danger nav-btn" onclick="nextScreen(5)">➡</button>
+    </div>
 </div>
 
-</div> <!-- appContainer -->
+<!-- ==========================
+     PANTALLA 5: FINAL (CAMINEMOS BONITO) CON IMAGEN + AUDIO
+============================== -->
+<div id="screen5" class="screen hidden">
+    <h1 class="text-danger">Caminemos bonito</h1>
+
+    <!-- Imagen entre título y mensaje -->
+    <img src="final.jpg" class="full-image" alt="Imagen final">
+
+    <p id="mensaje2">
+        
+    </p>
+
+    <!-- Audio final debajo del mensaje -->
+    <audio controls class="mt-2">
+        <source src="3.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <button class="btn btn-danger nav-btn mt-3" onclick="nextScreen(4)">⬅</button>
+</div>
+
+</div> <!-- FIN appContainer -->
 
 <!-- ==========================
      SCRIPTS
